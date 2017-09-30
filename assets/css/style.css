@@ -84,12 +84,6 @@ body {
 /*}*/
 
 
-hr {
-	height: 2px;
-	background-color: lightgray;
-	margin: 0;
-}
-
 
 section {
 	max-width: 960px;
@@ -102,10 +96,6 @@ section {
 
 }
 
-#articleline, #asideline {
-	margin: 0 30px;
-}
-
 #biopicture {
 	width: 250px;
 	float: left;
@@ -113,18 +103,21 @@ section {
 }
 
 article {
-	width: 650px;
+	max-width: 650px;
 	background-color: #ffffff;
 	margin: 35px 0;
 	float: left;
 	margin-bottom: 100px;
+	padding: 0;
+	width: 100%;
 }
 
 #articletitle, #asidetitle {
 	color: #4aaaa5;
 	font-size: 35px;
-	padding: 30px;
 	font-family: 'Georgia', Times, Times New Roman, serif;
+	border-bottom: 2px solid #eee;
+	margin: 30px 30px 10px;
 }
 
 #asidetitle {
@@ -137,10 +130,12 @@ article {
 }
 
 aside {
-	width: 270px;
+	max-width: 270px;
+	width: 100%;
 	background-color: #ffffff;
 	float: right;
 	margin-top: 35px;
+	padding: 0;
 }
 
 .iconlinks {
@@ -202,14 +197,9 @@ footer {
 	font-size: 20px;
 }
 
-.imagesbox {
-	position: relative;
-	width: 590px;
-	margin: 30px;
-	height: 900px;
-}
 
-#hangman, #rpg, #trivia, #widget, #rockpaper {
+/*#hangman, #rpg, #trivia, #widget, #rockpaper */
+/*.portfolioimage {
 	float: left;
 	position: absolute;
 }
@@ -224,19 +214,68 @@ footer {
 
 #trivia, #widget {
 	top: 308px;
+}*/
+
+/*.portfolioimage img {
+	float: left;
+	margin: 20px 20px;
+	max-width: 270px;
+	width: 100%;
+	
+}
+
+.portfolioimage {
+	width: 100%;
+	max-width: 270px;
+	position: relative;
 }
 
 .imagenamebox {
-	width: 240px;
+	width: 100%;
 	background-color: #4aaaa5;
-	position: absolute;
-	z-index: 10;
-	top: 210px;
+	z-index: 55;
 	color: #ffffff;
 	text-align: center;
-	padding: 20px;
+	padding: 20px 0;
 	font-size: 20px;
 	font-family: 'Georgia', Times, Times New Roman, serif;
+	max-width: 270px;
+}*/
+
+.portfolioimage {
+  position: relative;
+  float: left;
+  width: 274px;
+  margin: 20px 0 25px;
+}
+
+.portfolioimage:nth-child(even) {
+  margin-right: 40px;
+
+}
+
+.portfolioimage img {
+  width: 100%;
+  border: 0 none;
+  opacity: 0.8;
+}
+
+.imagenamebox {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  background: #4aaaa5;
+  border-bottom: 0;
+}
+
+#hangman, #trivia, #rockpaper {
+	margin-left: 30px;
 }
 
 .clearfix::after {
@@ -254,24 +293,25 @@ footer {
 	section 	{
 		width: 100%;
 		padding-left: 30px;
-		padding-right: 30px;
-				}
-	.navbox 	{
-		margin-right: 50px;
-				}
-	
+		}
 }
 
 @media screen and (max-width: 768px) {
 	aside 		{
 		float: none;
 		clear: both;
-		width: 650px;
+		max-width: 650px;
+		margin-top: 0;
+		width: 100%;
 
 	}
 	#biopicture {
 		float: left;
 		width: 250px;
+	}
+
+	article {
+		margin-bottom: 40px;
 	}
 
 }
@@ -285,17 +325,45 @@ footer {
 	#nameheader {
 		width: 100%;
 		float: none;
+		max-width: 640px;
 				}
 	.navbox	{
-		width: 100%;
+		width: 258px;
 		float: none;
-		margin: 0 0 0 230px;
+		margin: 0 auto;
 		line-height: 25px;
 		padding: 20px 0;
 				}
 	section 	{
-		padding: 130px 30px 80px;
+		padding: 140px 30px 80px;
+		max-width: 640px;
 				}
+	#navlinks	{
+		margin: 0 auto;
+				}
+	header 		{
+		width: 100%;
+		max-width: 640px;
+				}
+	.portfolioimage {
+		clear: both;
+		position: relative;
+		top: 0;
+		left: 0;
+				}
+	.imagesbox 	{
+		height: 100%;
+		width: 100%
+		overflow: auto;
+	}
+
+	aside {
+		width: 100%;
+	}
+
+	#rpg, #widget {
+		margin-left: 30px;
+	}
 
 	
 	
@@ -303,5 +371,8 @@ footer {
 }
 
 
-
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 
